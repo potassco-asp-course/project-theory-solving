@@ -16,7 +16,7 @@ SOLUTIONS = "solutions/"
 
 
 def call_python(input_names, timeout):
-    cmd = [PYTHON, "app.py",  "job2task.lp",  "dl/fsE.lp", "--minimize-variable",  "bound", "--warn=no-atom-undefined", "--warn=no-file-included", "--warn=no-operation-undefined", "--warn=no-variable-unbounded", "--warn=no-global-variable" ] + input_names
+    cmd = [PYTHON, "app.py",  "job2task.lp",  "dl/fsE.lp", "--minimize-variable",  "bound", "--warn=no-atom-undefined", "--warn=no-file-included", "--warn=no-operation-undefined", "--warn=no-global-variable" ] + input_names
     start = time.time()
     output = run(cmd, stdout=PIPE, stderr=PIPE, timeout=timeout)
     end = time.time()
